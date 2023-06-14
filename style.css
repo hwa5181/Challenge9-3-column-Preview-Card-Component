@@ -1,0 +1,117 @@
+:root {
+    /*Primary*/
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /*Neutral*/
+    /*paragraph*/
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+
+    /* background, headings, buttons */
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 1rem;
+    margin: 0;
+    display: grid; 
+    min-height: 100vh;
+    place-content: center;
+    background-color: var(--very-light-gray);
+}
+
+h1, h2, h3, h4, h5, h6,
+p {
+    margin: 0; 
+ }
+
+
+main {
+    display: grid;
+    grid-auto-rows: 1fr;
+}
+
+.sedans,
+.suvs,
+.luxury {
+    padding: 2rem;
+    display: grid;
+    align-items: center ;
+    gap: 2rem;
+}
+
+.icon {
+    width: 3.5rem;
+}
+
+.heading {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: var(--very-light-gray);
+}
+
+.description {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--transparent-white);
+}
+
+.btn-learn-more {
+    width: 8rem;
+    padding: 0.5rem;
+    border: calc(2.5/16*1rem) solid transparent;    
+    border-radius: 25rem;
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--very-light-gray);
+    cursor: pointer;
+}
+
+/* Background Colour */
+.sedans {
+    background-color: var(--bright-orange);
+}
+
+.suvs {
+    background-color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+
+/* Button Text Colour */
+.sedans .btn-learn-more {
+    color: var(--bright-orange);
+}
+
+.suvs .btn-learn-more {
+    color: var(--dark-cyan);
+}
+
+.luxury .btn-learn-more {
+    color: var(--very-dark-cyan);
+}
+
+
+/* Hover Effect */
+.btn-learn-more:hover {
+    background-color: transparent;
+    border: calc(2.5/16*1rem) solid var(--very-light-gray);
+    color: var(--very-light-gray);
+}
+
+
+@media screen and (min-width: 768px) {
+    main {
+        grid-auto-columns: calc(250/16*1rem);
+        grid-auto-flow: column;
+    }
+}
+
